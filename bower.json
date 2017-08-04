@@ -1,0 +1,25 @@
+{
+  "name": "personalwebsite",
+  "description": "Ian Walton's Blog",
+  "main": "app.js",
+  "authors": [
+    "Ian-Walton"
+  ],
+  "keywords": [
+    "ian",
+    "walton",
+    "node",
+    "angular",
+    "developer"
+  ],
+  "homepage": "www.itwalton.com",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "highlightjs": "^9.2.0",
+    "moment": "^2.12.0",
+    "font-awesome": "^4.6.1"
+  }
+}

@@ -1,0 +1,72 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ian Walton</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/public/lib/highlightjs/styles/monokai_sublime.css" />
+    <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/public/lib/font-awesome/css/font-awesome.min.css" />
+
+    <link href='//fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/public/css/main.min.css" />
+
+    <meta name="description" content="Ian Walton on Software Development" />
+    <meta name="keywords" content="Ian, JavaScript, Software, Development, Walton" />
+
+    <base href="/" />
+  </head>
+
+  <body ng-app="mainApp">
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-81129708-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Header -->
+    <header id="header" class="row">
+      <div class="col-sm-4">
+        <div class="col-sm-12">
+          <a href="/" title="Home" class="pull-left m-t-sm">
+            <img alt="Ian Walton" src="/public/img/name.png" height="45px" width="175px" />
+          </a>
+        </div>
+      </div>
+
+      <div class="col-sm-8 hidden-xs">
+        <div class="col-sm-12">
+          <div class="pull-right m-t">
+            <nav class="list-group-inline inline-top m-t-sm">
+              <li ui-sref-active="active" class="m-r"><a ui-sref="list">home</a></li>
+              <li ui-sref-active="active"><a ui-sref="about">about</a></li>
+            </nav>
+
+            <ul class="list-group-inline inline-top">
+              <li><a class="icon twitter" href="//twitter.com/itwalton"></a></li>
+              <li><a class="icon github" href="//github.com/itwalton"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="m-t" ui-view></main>
+
+    <!-- Vendor JS -->
+    <script src="/public/lib/angular/angular.min.js"></script>
+    <script src="/public/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- External Dependencies -->
+    <script src="/public/lib/highlightjs/highlight.pack.min.js"></script>
+    <script src="/public/lib/moment/min/moment.min.js"></script>
+
+    <!-- App -->
+    <script src="/public/js/main.min.js"></script>
+  </body>
+</html>
