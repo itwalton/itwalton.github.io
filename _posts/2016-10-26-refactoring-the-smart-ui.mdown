@@ -101,11 +101,11 @@ And best of all, it's fully testable:
   // test/product/model_spec.js
   it("is true for products with inventory below the global threshold", () => {
     let SiteMock = jasmine.createSpyObj("Site", ["getGlobalInventoryThreshold"]);
-    SiteMock.getGlobalInventoryThreshold.anValue(999999);
+    SiteMock.getGlobalInventoryThreshold.andReturnValue(999999);
     mock("path/to/SiteModel", SiteMock);
 
     let product = new ProductModel({ custom: { canShowInventoryThreshold: true } });
-    spyOn(product, "getInventoryOnHand").anValue(1);
+    spyOn(product, "getInventoryOnHand").andReturnValue(1);
 
     expect(product.canShowInventoryCallout()).toBe(true);
   });
