@@ -1,3 +1,5 @@
 name: Ian Walton
+description: Tech Blog
 markdown: kramdown
+google_analytics: UA-81129708-1
 theme: jekyll-theme-minimal
