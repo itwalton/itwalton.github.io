@@ -14,12 +14,33 @@ a {
   a:hover, a:active, a:focus {
     color: #AB4C20; }
 
+time {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+#main {
+  min-height: 78%;
+}
+
 .block {
   display: block; }
 
 .inline-top {
   display: inline-block;
   vertical-align: top; }
+
+.p-t {
+  padding-top: 1rem;
+}
+
+.p-b {
+  padding-bottom: 1rem;
+}
+
+.p-r {
+  padding-right: 1rem;
+}
 
 .m-t-lg {
   margin-top: 3rem; }
@@ -42,9 +63,13 @@ a {
 .rounded {
   border-radius: 360px; }
 
-pre {
-  border: none;
-  padding: 0; }
+.und {
+  text-decoration: underline;
+}
+
+.text-right {
+  text-align: right;
+}
 
 .list-group-inline li {
   display: inline-block;
@@ -89,13 +114,23 @@ pre {
     border-bottom: none;
     background-color: #ededed; }
 
-#post p {
-  font-size: 16px;
+p {
+  font-size: 12px;
   word-spacing: 4px;
   margin: 1.6em 0; }
-#post pre {
-  font-size: 12px; }
+
+.post-heading {
+  background-color: #272822;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: #FFF;
+  text-align: center;
+}
 
 @media (min-width: 768px) {
-  #post pre {
-    font-size: 16px; } }
+  p {
+    font-size: 16px;
+  }
+}

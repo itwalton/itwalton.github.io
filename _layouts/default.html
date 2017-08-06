@@ -5,17 +5,20 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ian Walton on Software Development" />
+    <meta name="keywords" content="Ian, JavaScript, Software, Development, Walton" />
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans" />
 
+    <link rel="stylesheet" type="text/css" href="/assets/css/pygments-monokai.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
   </head>
 
   <body>
-    <header id="header" class="row">
+    <header id="header" class="row p-t p-b">
       <div class="col-sm-4">
         <div class="col-sm-12">
           <a href="/" title="Home">
@@ -24,24 +27,28 @@
         </div>
       </div>
 
-      <nav>
-        <ul>
-          <a href="/">home</a>
-          <a href="/about">about</a>
-        </ul>
-      </nav>
+      <div class="col-sm-8 hidden-xs">
+        <div class="col-sm-12">
+          <div class="pull-right m-t">
+            <nav class="list-group-inline inline-top">
+              <ul>
+                <li {% if page.url == '/' %}class="active"{% endif %}>
+                    <a href="/" title="Home">home</a>
+                </li>
+                <li {% if page.url == '/about' %}class="active"{% endif %}>
+                  <a href="/about" title="About">about</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
     </header>
 
-    <main id="main">
-      {{ content }}
-    </main>
+    <h1 class="post-heading">{{ page.header }}</h1>
+    <main id="main">{{ content }}</main>
 
     <footer>
-      <ul>
-        <li><a href="mailto:itwalton@gmail.com" title="Email">email</a></li>
-        <li><a href="//twitter.com/itwalton" title="Twitter">twitter</a></li>
-        <li><a href="//github.com/itwalton" title="GitHub">github</a></li>
-      </ul>
+      <div class="p-r text-right">© Copyright 2017 Ian Walton</div>
     </footer>
   </body>
 </html>
