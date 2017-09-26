@@ -44,7 +44,7 @@
         </div>
     </header>
 
-    <h1 class="post-heading">{{ page.header }}</h1>
+    {% if page.header %}<h1 class="post-heading">{{ page.header }}</h1>{% endif %}
     <main id="main">{{ content }}</main>
 
     <footer>
