@@ -1,6 +1,4 @@
-Hello World!
-
-<!-- ---
+---
 layout: default
 title: Ian Walton - Homepage
 ---
@@ -10,24 +8,24 @@ title: Ian Walton - Homepage
     <div class="panel panel-default col-sm-12">
       <div class="panel-body">
         {% for post in site.posts %}
-          <article class="media">
-            <div class="media-body">
-              <h3 class="media-heading">
-                <a href="{{ post.url }}" title="{{ post.title }}" class="und">{{ post.title }}</a>
-              </h3>
-              <time class="block m-b" title="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
-              <p>
-                {{ post.description }}
-                <a href="{{ post.url }}" title="{{ post.title }}" class="und">Read more...</a>
-              </p>
-            </div>
+        <article class="media">
+          <div class="media-body">
+            <h3 class="media-heading">
+              <a href="{{ post.url }}" title="{{ post.title }}" class="und">{{ post.title }}</a>
+            </h3>
+            <time class="block m-b" title="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
+            <p>
+              {{ post.description }}
+              <a href="{{ post.url }}" title="{{ post.title }}" class="und">Read more...</a>
+            </p>
+          </div>
 
-            {% if forloop.last == false %}
-              <hr>
-            {% endif %}
-          </article>
+          {% if forloop.last == false %}
+          <hr>
+          {% endif %}
+        </article>
         {% endfor %}
       </div>
     </div>
   </div>
-</div> -->
+</div>
