@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>{{ page.title }}</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ian Walton on Software Development" />
-    <meta name="keywords" content="Ian, JavaScript, Software, Development, Walton" />
+<head>
+  <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ian Walton on Software Development" />
+  <meta name="keywords" content="Ian, JavaScript, Software, Development, Walton" />
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+  <link rel="stylesheet" type="text/css"
+    href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/pygments-monokai.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
-  </head>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans" />
 
-  <body>
-    <header id="header" class="row p-t p-b">
-      <div class="col-sm-4">
-        <div class="col-sm-12">
-          <a href="/" title="Home">
-            <img alt="Ian Walton" src="/assets/img/name.png" height="45px" width="175px" />
-          </a>
+  <link rel="stylesheet" type="text/css" href="/assets/css/pygments-monokai.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+</head>
+
+<body>
+  <header id="header" class="row p-t p-b">
+    <div class="col-sm-4">
+      <div class="col-sm-12">
+        <a href="/" title="Home">
+          <img alt="Ian Walton" src="/assets/img/name.png" height="45px" width="175px" />
+        </a>
+      </div>
+    </div>
+
+    <div class="col-sm-8 hidden-xs">
+      <div class="col-sm-12">
+        <div class="pull-right m-t">
+          <nav class="list-group-inline inline-top">
+            <ul>
+              <li {% if page.url == '/' %}class="active" {% endif %}>
+                <a href="/" title="Home">home</a>
+              </li>
+              <li {% if page.url == '/about' %}class="active" {% endif %}>
+                <a href="/about" title="About">about</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
+  </header>
 
-      <div class="col-sm-8 hidden-xs">
-        <div class="col-sm-12">
-          <div class="pull-right m-t">
-            <nav class="list-group-inline inline-top">
-              <ul>
-                <li {% if page.url == '/' %}class="active"{% endif %}>
-                    <a href="/" title="Home">home</a>
-                </li>
-                <li {% if page.url == '/about' %}class="active"{% endif %}>
-                  <a href="/about" title="About">about</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-    </header>
+  {% if page.header %}<h1 class="post-heading">{{ page.header }}</h1>{% endif %}
+  <main id="main">{{ content }}</main>
 
-    {% if page.header %}<h1 class="post-heading">{{ page.header }}</h1>{% endif %}
-    <main id="main">{{ content }}</main>
+  <footer>
+    <div class="p-r text-right">© Copyright 2019 Ian Walton</div>
+  </footer>
+</body>
 
-    <footer>
-      <div class="p-r text-right">© Copyright 2017 Ian Walton</div>
-    </footer>
-  </body>
 </html>
