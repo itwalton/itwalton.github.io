@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2019-07-13
+date: 2020-07-13
 title: Better Dependency Management in Express Applications
 header: Better Dependency Management in Express Applications
 description: Leverage TypeScript with dependency injection for cleaner, more maintainable REST APIs.
