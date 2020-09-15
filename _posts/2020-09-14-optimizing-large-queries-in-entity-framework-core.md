@@ -89,5 +89,4 @@ These two simple refactors eliminated the request timeouts and resulted in some 
 
 You may be wondering why I didn't add an index to the Feature collection? Maybe I could have - I'd certainly be interested in hearing constructive criticism from more knowledgeable members of the industry. In this case the code solution adequately resolved the issue and I saw no need to delve further. If the DB had been experiencing high CPU-utilization rather than RAM that may be an indication of inefficient reads or I/O problems, in which case reducing the number of records read w/ an index or something would be useful.
 
-As always, thanks for reading,
-- Ian
+As always, thanks for reading. - Ian
