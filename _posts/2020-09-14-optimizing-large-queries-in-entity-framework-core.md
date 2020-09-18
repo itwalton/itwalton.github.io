@@ -14,7 +14,7 @@ I recently joined a SaaS startup helping utility companies manage infrastructure
 
 Someone a lot smarter than me once said "listen to anecdotes, act on data", so instead of immediately hacking at the problem I installed some basic error logging and monitoring tools within AWS to try and tease out any more information. It become obvious immediately that a particular EFCore query written in LINQ was hanging and eventually timing out.
 
-The next step was analyzing the RDS monitoring tools for any abnormalities. In this case, executing the query corresponded with a substantial jump in RAM utilization. I'm definitely not a DBA, but I took to indicate a substantial number of records being retrieved and/or manipulated all at once. This gelled with my understanding of the purpose for the REST call in question and the volume of JOINs in the LINQ query.
+The next step was analyzing the RDS monitoring tools for any abnormalities. In this case, executing the query corresponded with a substantial jump in RAM utilization. I'm definitely not a DBA, but I took this to indicate a substantial number of records being retrieved and/or manipulated all at once. This gelled with my understanding of the purpose for the REST call in question and the volume of JOINs in the LINQ query.
 
 Let me pause here and acknowledge the easy solution here - if your team has a budget capable of increasing RDS instance sizes or spinning up additional read replicas, that will *almost always* be cheaper for the business that investing engineering time to debug the issue. In this case, provisioning more resources was not in the cards and so down the rabbit hole I went.
 
