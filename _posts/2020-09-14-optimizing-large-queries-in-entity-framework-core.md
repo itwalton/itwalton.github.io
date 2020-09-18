@@ -8,7 +8,7 @@ description: Understanding how to mitigate request timeouts on queries returning
 
 ## Introduction
 
-I recently joined the [Ziptility](ziptility.com) team, a SaaS startup helping utility companies manage infrastructure and new-project collaboration, as an backend engineer. The application stack basically consists of few .NET Core microservices with a SQLServer DB in AWS RDS. My first task after joining was debugging & resolving an issue where customers experienced extreme latency on a particular page of our SPA web app.
+I recently joined a SaaS startup helping utility companies manage infrastructure and new-project collaboration, as an backend engineer. The application stack basically consists of few .NET Core microservices with a SQLServer DB in AWS RDS. My first task after joining was debugging & resolving an issue where customers experienced extreme latency on a particular page of our SPA web app.
 
 ## Error Logging and Profiling
 
